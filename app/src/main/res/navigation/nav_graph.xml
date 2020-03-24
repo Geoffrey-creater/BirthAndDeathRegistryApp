@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/title_screen">
+
+    <fragment
+        android:id="@+id/title_screen"
+        android:name="com.example.learningexample.Controllers.SignUpSignInFragment"
+        android:label="fragment_title_screen"
+        tools:layout="@layout/fragment_sign_in_sign_up" >
+        <action
+            android:id="@+id/action_title_screen_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_title_screen_to_resultsWinner"
+            app:destination="@id/resultsWinner" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.learningexample.Controllers.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_match"
+            app:destination="@id/match" />
+    </fragment>
+    <fragment
+        android:id="@+id/match"
+        android:name="com.example.learningexample.Controllers.BarcodeScanFragment"
+        android:label="fragment_match"
+        tools:layout="@layout/fragment_scanbarcode" >
+        <action
+            android:id="@+id/action_match_to_birthCertDownload"
+            app:destination="@id/birthCertDownload" />
+        <action
+            android:id="@+id/action_match_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inGame"
+        android:name="com.example.learningexample.Controllers.EntryScreenFragment"
+        android:label="fragment_in_game"
+        tools:layout="@layout/fragment_entry_screen" >
+        <action
+            android:id="@+id/action_inGame_to_title_screen"
+            app:destination="@id/title_screen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultsWinner"
+        android:name="com.example.learningexample.Controllers.SignInFragment"
+        android:label="fragment_results_winner"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_resultsWinner_to_register"
+            app:destination="@id/register" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.learningexample.Controllers.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_birthCertDownload"
+            app:destination="@id/birthCertDownload" />
+    </fragment>
+    <fragment
+        android:id="@+id/birthCertDownload"
+        android:name="com.example.learningexample.Controllers.BirthDeathCertDownloadFragment"
+        android:label="fragment_birth_cert_download"
+        tools:layout="@layout/fragment_birth_cert_download" />
+</navigation>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Rudiments2</string>
+    <string name="intro_text">The Births and Deaths registry exists to
+         provide accurate information of all births
+        </string>
+    <string name="secondintrotext">and deaths occuring in Ghana.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
